@@ -66,7 +66,7 @@ public class Conexion extends Thread{
 			} while (eleccionValida!=50);
 			
 			if (elegir==1){
-				// queremos recibir datos
+				
 				do {
 					System.out.println("1- CLIENTE?");
 					System.out.println("2- COCHE?");
@@ -97,7 +97,7 @@ public class Conexion extends Thread{
 				else if(claseVehiculo==2) {
 					
 					
-					System.out.println("Introduce la matricula");
+					System.out.println("Introduce matricula");
 					
 					String matricula=sc.nextLine();
 					this.dO.writeUTF(matricula);
@@ -117,7 +117,7 @@ public class Conexion extends Thread{
 				
 			}
 			else if(elegir==2) {
-				// queremos setear datos
+				
 				do {
 					System.out.println("1- CLIENTE");
 					System.out.println("2- COCHE");
@@ -130,11 +130,10 @@ public class Conexion extends Thread{
 				} while (eleccionValidaVehiculo!=50);
 				
 				if(claseVehiculo==1) {
-					// creamos un cliente y lo enviamos
-					// esperamos confirmacion
-					System.out.println("INTRODUCE UN DNI");
+				
+					System.out.println("INTRODUCE DNI");
 					String dni=sc.nextLine();
-					System.out.println("INTRODUCE UN NOMBRE");
+					System.out.println("INTRODUCE NOMBRE");
 					String nombre=sc.nextLine();
 					System.out.println("INTRODUCE APELLIDO1");
 					String apellido1=sc.nextLine();
@@ -155,10 +154,10 @@ public class Conexion extends Thread{
 					
 				}
 				else if (claseVehiculo==2) {
-					//creamos un coche y lo enviamos
-					System.out.println("INTRODUCE UNA MATRICULA");
+					
+					System.out.println("INTRODUCE MATRICULA");
 					String matricula=sc.nextLine();
-					System.out.println("INTRODUCE UNA MARCA");
+					System.out.println("INTRODUCE MARCA");
 					String marca=sc.nextLine();
 					System.out.println("INTRODUCE MODELO");
 					String modelo=sc.nextLine();
@@ -180,7 +179,7 @@ public class Conexion extends Thread{
 				
 			}
 			else if(elegir == 3) {
-				// queremos ver datos de totales
+			
 				int totalClientes=this.dI.readInt();
 				int totalCoches=this.dI.readInt();		
 				

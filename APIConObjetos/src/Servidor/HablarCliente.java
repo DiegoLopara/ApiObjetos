@@ -36,7 +36,7 @@ public class HablarCliente extends Thread{
 
 		this.clientes = a;
 		this.coches = b;
-		// con el socket que pasamos creamos los objetsInput y output
+	
 		
 		
 		this.dO= new DataOutputStream(socket.getOutputStream());
@@ -52,7 +52,7 @@ public class HablarCliente extends Thread{
 		super.run();
 		
 
-		//estas variables se me reinician en cada vuelta de bucle
+	
 		
 			
 		do {
@@ -61,7 +61,7 @@ public class HablarCliente extends Thread{
 		
 		do {
 			try {
-				// esperamos
+				
 			
 				
 				elegir=this.dI.readInt();
